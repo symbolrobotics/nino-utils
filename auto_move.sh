@@ -7,9 +7,9 @@ count=1
 echo "Start moving joint"
 
 while true; do
-	cansend can0 064#6901680109000000
+	cansend can0 064#6D01B40109000000
 	sleep "$DELAY"
-	cansend can0 064#690198FE09000000
+	cansend can0 064#6D01000009000000
 	sleep "$DELAY"
 	echo "$count"
 	count=$((count + 1))
