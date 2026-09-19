@@ -54,14 +54,14 @@ sleep "$DELAY"
 count=1
 while [ "$count" -le "$CYCLES" ]; do
 
-    echo "Cycle $count/$CYCLES: up (-60/+60 degrees, 6 seconds)"
-    cansend can0 064#6701920A86BF0600
-    cansend can0 064#6801920A863F0600
+    echo "Cycle $count/$CYCLES: up (-60/+60 degrees = -43691/+43691 counts, 6 seconds)"
+    cansend can0 064#67015555FFFF0600
+    cansend can0 064#6801ABAA00000600
     sleep "$DELAY"
 
-    echo "Cycle $count/$CYCLES: rest (-1/+1 degrees, 7 seconds)"
-    cansend can0 064#670135FA8EBC0700
-    cansend can0 064#680135FA8E3C0700
+    echo "Cycle $count/$CYCLES: rest (-1/+1 degrees = -728/+728 counts, 7 seconds)"
+    cansend can0 064#670128FDFFFF0700
+    cansend can0 064#6801D80200000700
     sleep "$DELAY"
 
     echo "Cycle $count/$CYCLES completed."
